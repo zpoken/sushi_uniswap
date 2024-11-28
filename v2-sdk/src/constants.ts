@@ -9,7 +9,9 @@ export enum ChainId {
   RINKEBY = 4,
   GÖRLI = 5,
   KOVAN = 42,
-  HEMI = 743111
+  // TODO add there
+  HEMI = 743111,
+  SEPOLIA = 11155111
 }
 
 export enum TradeType {
@@ -23,9 +25,12 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x462c49b00372Fe91f39a05A2A8c6beb1692961e7'
+ // TODO add there
+export const FACTORY_ADDRESS = '0x696d8e24182dA0897e2a77B4471EE07d34162AA4' //sepolia
+// '0x462c49b00372Fe91f39a05A2A8c6beb1692961e7' //hemi
 
-export const INIT_CODE_HASH = '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303'
+ // TODO add there
+export const INIT_CODE_HASH = '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303' //hemi and sepolia
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 

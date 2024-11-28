@@ -24,7 +24,9 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.HEMI]: [WETH[ChainId.HEMI]]
+  //TODO add there
+  [ChainId.HEMI]: [WETH[ChainId.HEMI]],
+  [ChainId.SEPOLIA]: [WETH[ChainId.SEPOLIA]]
 }
 
 // used to construct intermediary pairs for trading
@@ -58,6 +60,12 @@ export const SUGGESTED_BASES: ChainTokenList = {
     new Token(ChainId.HEMI, '0xec46e0efb2ea8152da0327a5eb3ff9a43956f13e', 18, 'DAI', 'Dai Stablecoin'),
     new Token(ChainId.HEMI, '0xD47971C7F5B1067d25cd45d30b2c9eb60de96443', 6, 'USDC', 'USD//C'),
     new Token(ChainId.HEMI, '0x3Adf21A6cbc9ce6D5a3ea401E7Bae9499d391298', 6, 'USDT', 'Tether USD')
+  ],
+  [ChainId.SEPOLIA]: [
+    // ...WETH_ONLY[ChainId.HEMI],
+    new Token(ChainId.SEPOLIA, '0x93314Ce14f4d736d66F6A9ca6Dc1130913DDb476', 18, 'DAI', 'Dai Stablecoin'),
+    new Token(ChainId.SEPOLIA, '0x1552926e4df06fceEfBbbDcc98747eB15CB27BbC', 6, 'USDC', 'USDC'),
+    new Token(ChainId.SEPOLIA, '0x8D4C1C4F8adE303d12949EdA340F0e449f1C7E33', 6, 'USDT', 'Tether USD')
   ]
 }
 
