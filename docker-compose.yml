@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  react-app:
+    build:
+      context: .  # Build from the current directory
+      dockerfile: Dockerfile  # Use the specified Dockerfile
+    container_name: react-app
+    ports:
+      - "3000:3000"  # Map port 3000 on the host to port 3000 in the container
+    volumes:
+      - .:/app  # Mount the current directory to the container
+      - /app/node_modules  # Avoid mounting node_modules
+   
