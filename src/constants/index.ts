@@ -4,7 +4,7 @@ import { fortmatic, injected, portis, walletconnect, walletlink } from '../conne
 import { ChainId, JSBI, Percent, Token, WETH } from '../utilities'
 
 // TODO add for hemi
-export const ROUTER_ADDRESS = '0xE5325Dc35aFa63B57De7D5dD52de092a7E960FA3'
+export const ROUTER_ADDRESS = '0x34C11B4d9EECe228a9C64Bc78b15aefE15327d64'
 
 // a list of tokens by chain
 type ChainTokenList = {
