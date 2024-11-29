@@ -5,7 +5,7 @@ import { FixedSizeList } from 'react-window'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
 import { useActiveWeb3React } from '../../hooks'
-import { useAllTokens, useToken } from '../../hooks/Tokens'
+import {  useToken } from '../../hooks/Tokens'
 import { useSelectedListInfo } from '../../state/lists/hooks'
 import { CloseIcon, LinkStyledButton, TYPE } from '../../theme'
 import { isAddress } from '../../utils'
@@ -21,7 +21,7 @@ import SortButton from './SortButton'
 import { useTokenComparator } from './sorting'
 import { PaddedColumn, SearchInput, Separator } from './styleds'
 import AutoSizer from 'react-virtualized-auto-sizer'
-import { Currency, ETHER, Token } from '../../utilities'
+import { ChainId, Currency, ETHER, Token } from '../../utilities'
 
 interface CurrencySearchProps {
   isOpen: boolean
@@ -49,7 +49,12 @@ export function CurrencySearch({
   const fixedList = useRef<FixedSizeList>()
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [invertSearchOrder, setInvertSearchOrder] = useState<boolean>(false)
-  const allTokens = useAllTokens()
+  const allTokens = [
+    new Token(ChainId.SEPOLIA, '0x93314Ce14f4d736d66F6A9ca6Dc1130913DDb476', 18, 'DAI', 'Dai Stablecoin'),
+    new Token(ChainId.SEPOLIA, '0x1552926e4df06fceEfBbbDcc98747eB15CB27BbC', 6, 'USDC', 'USDC'),
+    new Token(ChainId.SEPOLIA, '0x8D4C1C4F8adE303d12949EdA340F0e449f1C7E33', 6, 'USDT', 'Tether USD')
+  ]
+  // useAllTokens()
 
   // if they input an address, use it
   const isAddressSearch = isAddress(searchQuery)
