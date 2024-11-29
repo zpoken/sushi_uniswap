@@ -23,8 +23,8 @@ export default function CurrencySearchModal({
   otherSelectedCurrency,
   showCommonBases = false
 }: CurrencySearchModalProps) {
-  const [listView, setListView] = useState<boolean>(false)
-  const lastOpen = useLast(isOpen)
+  const [listView, setListView] = useState<boolean>(true)
+  const lastOpen = useLast(true)
 
   useEffect(() => {
     if (isOpen && !lastOpen) {

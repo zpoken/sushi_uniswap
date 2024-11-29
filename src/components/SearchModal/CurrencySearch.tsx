@@ -5,7 +5,7 @@ import { FixedSizeList } from 'react-window'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
 import { useActiveWeb3React } from '../../hooks'
-import {  useToken } from '../../hooks/Tokens'
+import { useToken } from '../../hooks/Tokens'
 import { useSelectedListInfo } from '../../state/lists/hooks'
 import { CloseIcon, LinkStyledButton, TYPE } from '../../theme'
 import { isAddress } from '../../utils'
@@ -180,7 +180,11 @@ export function CurrencySearch({
             <CurrencyList
               height={height}
               showETH={showETH}
-              currencies={filteredSortedTokens}
+              currencies={[
+                new Token(ChainId.SEPOLIA, '0x93314Ce14f4d736d66F6A9ca6Dc1130913DDb476', 18, 'DAI', 'Dai Stablecoin'),
+                new Token(ChainId.SEPOLIA, '0x1552926e4df06fceEfBbbDcc98747eB15CB27BbC', 6, 'USDC', 'USDC'),
+                new Token(ChainId.SEPOLIA, '0x8D4C1C4F8adE303d12949EdA340F0e449f1C7E33', 6, 'USDT', 'Tether USD')
+              ]}
               onCurrencySelect={handleCurrencySelect}
               otherCurrency={otherSelectedCurrency}
               selectedCurrency={selectedCurrency}
